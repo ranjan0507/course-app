@@ -22,15 +22,13 @@ const User = new Schema({
 		required : true ,
 		enum : ['student' , 'instructor' ] ,
 		default : 'student'
-	} ,
-	enrolledCourses : [
-		{
-			type : Schema.Types.ObjectId ,
-			ref : "courses"
-		}
-	]
+	} 
 },{
 	timestamps : true
+})
+
+User.index({
+	email : 1
 })
 
 export const UserModel = mongoose.model('users',User)

@@ -25,4 +25,8 @@ const Course = new Schema({
 	timestamps : true
 })
 
+Course.index({
+	instructor : 1
+})
+
 export const CourseModel = mongoose.model('courses',Course)
