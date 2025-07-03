@@ -20,4 +20,4 @@ Order.index({
 	user : 1 
 })
 
-export const OrderModel = mongoose.model('orders',schema)
+export const OrderModel = mongoose.model('orders',Order)

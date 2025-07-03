@@ -5,7 +5,8 @@ import { UserModel } from '../models/UserModel.js';
 export const register = async (req, res, next) => {
 	try {
 		const {name , email , password , role} = req.body ;
-		
+		if (!['student','instructor'].includes(role)) role = 'student';
+				
 		const existing = await UserModel.findOne({
 			email : email
 		})
