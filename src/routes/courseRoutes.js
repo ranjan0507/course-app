@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { getCourse , listCourses , createCourse , updateCourse , deleteCourse } from "../controllers/CourseController";
-import { authenticate } from "../middlewares/auth";
-import { authorize } from "../middlewares/authorize";
+import { getCourse , listCourses , createCourse , updateCourse , deleteCourse } from "../controllers/courseController.js";
+import { authenticate } from "../middlewares/auth.js";
+import { authorize } from "../middlewares/authorize.js";
 
 const router = Router() ;
 

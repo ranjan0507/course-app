@@ -1,11 +1,11 @@
-import './config.js'
+import './src/config.js'
 import express from "express" ;
 import cors from 'cors' ;
-import userRouter from './routes/UserRoutes.js'
-import courseRouter from './routes/CourseRoutes.js'
-import orderRouter from './routes/OrderRoutes.js'
-import purchaseRouter from './routes/PurchaseRoutes.js'
-import { connectDB } from "./utils/db.js";
+import userRouter from './src/routes/userRoutes.js'
+import courseRouter from './src/routes/courseRoutes.js'
+import orderRouter from './src/routes/orderRoutes.js'
+import purchaseRouter from './src/routes/purchaseRoutes.js'
+import { connectDB } from "./src/utils/db.js";
 
 const app = express() ;
 

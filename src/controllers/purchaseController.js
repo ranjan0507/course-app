@@ -1,4 +1,4 @@
-import { OrderModel } from "../models/OrderModel"
+import { OrderModel } from "../models/OrderModel.js"
 
 export const listPurchases = async (req , res , next) => {
 	try {
