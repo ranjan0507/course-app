@@ -9,7 +9,7 @@ export const listPurchases = async (req , res , next) => {
 			createdAt : -1
 		  })
 	} catch (error) {
-		
+		next(err) ;
 	}
 }
 
@@ -26,6 +26,6 @@ export const getPurchase = async (req,res,next) => {
 		}
 		res.json(order)
 	} catch (error) {
-		
+		next(err) ;
 	}
 }

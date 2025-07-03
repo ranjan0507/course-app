@@ -5,7 +5,7 @@ export const listCourses = async (req, res, next) => {
 		const courses = await CourseModel.find().populate('instructor','name') ;
 		res.json(courses) ;
 	} catch (error) {
-		
+		next(err) ;
 	}
 }
 
@@ -20,7 +20,7 @@ export const getCourse = async (req , res , next) => {
 		}
 		res.json(course) ; 
 	} catch (error) {
-		
+		next(err) ;
 	}
 }
 
@@ -39,7 +39,7 @@ export const createCourse = async (req , res , next) => {
 
 		res.status(201).json(course) ;
 	} catch (error) {
-		
+		next(err) ;
 	}
 }
 
@@ -63,7 +63,7 @@ export const updateCourse = async (req , res , next) => {
 		await CourseModel.save() ;
 		res.json(course) ;
 	} catch (error) {
-		
+		next(err) ;
 	}
 }
 
@@ -84,6 +84,6 @@ export const deleteCourse = async (req, res, next) => {
 		await course.remove() ;
 		res.status(204).end() ;
 	} catch (error) {
-		
+		next(err) ;
 	}
 }

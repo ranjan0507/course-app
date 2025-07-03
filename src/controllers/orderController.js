@@ -30,6 +30,6 @@ export const createOrder = async (req , res , next) => {
 		})
 		res.status(201).json(order)
 	} catch (error) {
-		
+		next(err) ;
 	}
 }
