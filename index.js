@@ -1,9 +1,9 @@
-import './src/config.js'
+import './config.js'
 import express from "express" ;
 import cors from 'cors' ;
-import userRouter from './src/routes/UserRoutes.js'
-import courseRouter from './src/routes/CourseRoutes.js'
-import { connectDB } from "./src/utils/db.js";
+import userRouter from './routes/UserRoutes.js'
+import courseRouter from './routes/CourseRoutes.js'
+import { connectDB } from "./utils/db.js";
 
 const app = express() ;
 
