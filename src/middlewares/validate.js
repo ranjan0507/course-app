@@ -8,14 +8,14 @@ export const validate = (schema) => (req , res , next) => {
 		if(error instanceof ZodError){
 			return res.status(400).json({
         	message: 'Validation failed',
-       		issues: err.errors.map(e => ({
+       		issues: error.errors.map(e => ({
           			path:  e.path.join('.'),
           			message: e.message
 					}))
 			})
 		}
+		next(error) ;
 	}
-	next(err) ;
 }
 
 export const registerSchema = z.object({

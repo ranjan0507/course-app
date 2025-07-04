@@ -5,7 +5,7 @@ import userRouter from './src/routes/userRoutes.js'
 import courseRouter from './src/routes/courseRoutes.js'
 import orderRouter from './src/routes/orderRoutes.js'
 import purchaseRouter from './src/routes/purchaseRoutes.js'
-import errorHandler from './src/middlewares/errorHandler.js'
+import {errorHandler} from './src/middlewares/errorHandler.js'
 import { connectDB } from "./src/utils/db.js";
 
 const app = express() ;
